@@ -63,7 +63,7 @@
   --font-ui:    'Tajawal', system-ui, sans-serif;
   --font-brand: 'Playfair Display', Georgia, serif;
 
-  --header-h: 68px;
+  --header-h: 66px;
 }
 
 /* ── 3. Reset & Base ──────────────────────────────────────────────────────── */
@@ -107,7 +107,7 @@ a:focus-visible, button:focus-visible {
   padding-inline: 1.25rem;
 }
 
-/* ── 4. HEADER (Fixed Frosted Glass with Zero-Clip Layout) ────────────────── */
+/* ── 4. HEADER (Fixed Frosted Glass with Zero-Clip Guarantee) ─────────────── */
 .site-header {
   position: fixed;
   top: 0;
@@ -116,7 +116,7 @@ a:focus-visible, button:focus-visible {
   width: 100%;
   z-index: 200;
   height: var(--header-h);
-  background: rgba(249, 246, 247, 0.68);
+  background: rgba(249, 246, 247, 0.72);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
@@ -136,7 +136,8 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   justify-content: space-between;
   height: var(--header-h);
-  gap: 0.75rem;
+  width: 100%;
+  gap: 0.65rem;
 }
 
 /* Brand */
@@ -288,20 +289,20 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   gap: 5px;
   padding: 6px;
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: var(--r-s);
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(184, 107, 123, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(184, 107, 123, 0.25);
   flex-shrink: 0;
   transition: background var(--t-q) var(--ease-out);
 }
 .hamburger:hover {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
 }
 .hamburger span {
   display: block;
-  width: 20px;
+  width: 19px;
   height: 2px;
   background: var(--cocoa);
   border-radius: 2px;
@@ -375,7 +376,7 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   justify-content: center;
   padding-top: var(--header-h);
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
 }
 
 /* Image background */
@@ -421,8 +422,8 @@ a:focus-visible, button:focus-visible {
   width: 100%;
   max-width: 780px;
   margin-inline: auto;
-  padding: 0.5rem 1.25rem 0.5rem;
-  gap: 1.15rem;
+  padding: 0 1.25rem;
+  gap: 1.1rem;
   color: #FFFFFF;
 }
 
@@ -443,6 +444,7 @@ a:focus-visible, button:focus-visible {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   font-weight: 600;
+  white-space: nowrap;
 }
 .hero-eyebrow-line {
   display: block;
@@ -454,9 +456,9 @@ a:focus-visible, button:focus-visible {
 
 /* Headline */
 .hero-hl {
-  font-size: clamp(1.9rem, 5vw, 3.5rem);
+  font-size: clamp(1.9rem, 4.8vw, 3.4rem);
   font-weight: 800;
-  line-height: 1.22;
+  line-height: 1.24;
   color: #FFFFFF;
   letter-spacing: -.02em;
   text-wrap: balance;
@@ -467,85 +469,97 @@ a:focus-visible, button:focus-visible {
 
 /* Description */
 .hero-desc {
-  font-size: clamp(.9rem, 1.8vw, 1.08rem);
+  font-size: clamp(.88rem, 1.6vw, 1.05rem);
   color: rgba(255, 255, 255, 0.9);
-  line-height: 1.8;
-  max-width: 580px;
+  line-height: 1.75;
+  max-width: 560px;
   margin-inline: auto;
   text-align: center;
 }
 
-/* CTAs (Centered) */
+/* ── LUXURY HIGH-END CTAS (Rounded Pills, Glowing & Tactile) ─────────────── */
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: .85rem;
+  gap: .95rem;
   align-items: center;
   justify-content: center;
-  margin-top: .25rem;
+  margin-top: .2rem;
   width: 100%;
 }
 
+/* Primary CTA — Velvet Metallic Rosé Pill */
 .cta-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: .65rem;
-  padding: .9rem 2rem;
-  background: linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
+  gap: .75rem;
+  padding: .85rem 2.2rem;
+  background: linear-gradient(135deg, #C97285 0%, #A85165 50%, #8C3B4E 100%);
   color: #FFFFFF;
-  border-radius: var(--r-s);
-  font-size: .98rem;
+  border-radius: var(--r-pill);
+  font-size: 1rem;
   font-weight: 700;
-  box-shadow: 0 8px 24px rgba(184, 107, 123, 0.45);
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(168, 81, 101, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.4);
   min-height: 48px;
   transition: transform var(--t-q) var(--ease-spring),
-              box-shadow var(--t-q) var(--ease-out);
+              box-shadow var(--t-q) var(--ease-out),
+              background var(--t-q) var(--ease-out);
 }
-.cta-primary:hover  { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(184, 107, 123, 0.55); }
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(168, 81, 101, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.55);
+  background: linear-gradient(135deg, #D47B8E 0%, #B3586C 50%, #964255 100%);
+}
 .cta-primary:active { transform: scale(.96); }
 .cta-primary svg    { width: 18px; height: 18px; fill: currentColor; }
 
+/* Secondary CTA — Frosted Glass with Glowing Border */
 .cta-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: .65rem;
-  padding: .9rem 1.75rem;
+  gap: .75rem;
+  padding: .85rem 1.9rem;
   color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   border: 1.5px solid rgba(255, 255, 255, 0.45);
-  border-radius: var(--r-s);
-  font-size: .96rem;
+  border-radius: var(--r-pill);
+  font-size: .98rem;
   font-weight: 600;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   min-height: 48px;
   transition: border-color var(--t-q) var(--ease-out),
               background var(--t-q) var(--ease-out),
+              box-shadow var(--t-q) var(--ease-out),
               transform var(--t-q) var(--ease-spring);
 }
-.cta-ghost:hover  {
-  border-color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.2);
+.cta-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
 .cta-ghost:active { transform: scale(.96); }
-.cta-ghost svg    { width: 18px; height: 18px; fill: #25D366; flex-shrink: 0; }
+.cta-ghost svg    { width: 19px; height: 19px; fill: #25D366; flex-shrink: 0; filter: drop-shadow(0 0 6px rgba(37, 211, 102, 0.5)); }
 
-/* Trust strip (Centered, Wrapped, Compact) */
+/* Trust strip */
 .trust-strip {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: .65rem 1.25rem;
-  padding-top: 1rem;
+  padding-top: .85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
-  max-width: 600px;
+  max-width: 580px;
   margin-inline: auto;
-  margin-top: .2rem;
+  margin-top: .15rem;
 }
 
 .trust-pill {
@@ -566,12 +580,12 @@ a:focus-visible, button:focus-visible {
   flex-shrink: 0;
 }
 
-/* ── 6. SCROLL HINT (Flow Item inside Hero Copy: 100% VISIBLE & ZERO OVERLAP) */
+/* ── 6. SCROLL HINT (100% VISIBLE & ZERO OVERLAP) ─────────────────────────── */
 .scroll-hint {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: .2rem;
+  gap: .15rem;
   color: rgba(255, 255, 255, 0.85);
   font-size: .72rem;
   letter-spacing: .1em;
@@ -579,16 +593,16 @@ a:focus-visible, button:focus-visible {
   font-weight: 600;
   z-index: 3;
   cursor: pointer;
-  margin-top: .65rem;
+  margin-top: .45rem;
   transition: color var(--t-q) var(--ease-out), transform var(--t-q) var(--ease-spring);
-  animation: scroll-bob 2.6s var(--ease-out) infinite;
+  animation: scroll-bob 2.4s var(--ease-out) infinite;
 }
 .scroll-hint:hover { color: #FFFFFF; }
-.scroll-hint svg { width: 17px; height: 17px; fill: currentColor; }
+.scroll-hint svg { width: 16px; height: 16px; fill: currentColor; }
 
 @keyframes scroll-bob {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(5px); }
+  50%       { transform: translateY(4px); }
 }
 
 /* ── 7. DECORATIVE SEAL (Desktop Only) ────────────────────────────────────── */
@@ -672,16 +686,16 @@ a:focus-visible, button:focus-visible {
 
   .hero-copy {
     max-width: 680px;
-    padding: 1.25rem 1.5rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
 }
 
 /* Mobile (≤ 600px) — Tight, Clean, 100% Fits 100vh Without Cutting Anything */
 @media (max-width: 600px) {
-  :root { --header-h: 58px; }
+  :root { --header-h: 56px; }
 
   .container {
-    padding-inline: 0.65rem;
+    padding-inline: 0.85rem;
   }
   .header-row {
     gap: 0.4rem;
@@ -716,8 +730,8 @@ a:focus-visible, button:focus-visible {
   }
 
   .hero {
-    padding-top: calc(var(--header-h) + 0.4rem);
-    padding-bottom: 0.65rem;
+    padding-top: var(--header-h);
+    padding-bottom: 0.5rem;
     justify-content: center;
   }
   .hero-overlay {
@@ -731,47 +745,47 @@ a:focus-visible, button:focus-visible {
   }
 
   .hero-copy {
-    padding: 0 0.75rem;
-    gap: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    gap: 0.65rem;
     max-width: 100%;
   }
 
   .hero-eyebrow {
-    font-size: .74rem;
-    padding: .24rem .85rem;
+    font-size: .72rem;
+    padding: .22rem .8rem;
   }
 
   .hero-hl {
-    font-size: clamp(1.6rem, 7vw, 2.15rem);
-    line-height: 1.2;
+    font-size: clamp(1.48rem, 6.2vw, 2.05rem);
+    line-height: 1.22;
   }
 
   .hero-desc {
-    font-size: .88rem;
-    line-height: 1.6;
+    font-size: .84rem;
+    line-height: 1.55;
     max-width: 340px;
   }
 
   .hero-ctas {
     flex-direction: column;
     width: 100%;
-    gap: .55rem;
-    margin-top: .15rem;
+    gap: .5rem;
+    margin-top: .1rem;
   }
 
   .cta-primary,
   .cta-ghost {
     width: 100%;
-    max-width: 300px;
+    max-width: 290px;
     min-height: 42px;
     font-size: .92rem;
-    padding: .65rem 1.25rem;
+    padding: .65rem 1.4rem;
     margin-inline: auto;
   }
 
   .trust-strip {
-    gap: .45rem .85rem;
-    padding-top: .65rem;
+    gap: .4rem .9rem;
+    padding-top: .55rem;
     margin-top: .1rem;
   }
 
@@ -780,7 +794,7 @@ a:focus-visible, button:focus-visible {
   }
 
   .scroll-hint {
-    margin-top: .45rem;
+    margin-top: .35rem;
     gap: .15rem;
     font-size: .68rem;
   }
@@ -792,12 +806,12 @@ a:focus-visible, button:focus-visible {
   .hero-seal { display: none; }
 }
 
-/* Small & Micro Mobile Screens (≤ 340px and under 300px) — Zero Overlap, Zero Overflow */
+/* Micro Mobile Screens (≤ 340px and under 300px) — Zero Overlap, Zero Overflow */
 @media (max-width: 340px) {
-  :root { --header-h: 54px; }
+  :root { --header-h: 52px; }
 
   .container {
-    padding-inline: 0.45rem;
+    padding-inline: 0.5rem;
   }
   .header-row {
     gap: 0.25rem;
@@ -806,8 +820,8 @@ a:focus-visible, button:focus-visible {
     width: 30px;
     height: 30px;
   }
-  .brand-name {
-    font-size: 1.05rem;
+  .brand-words {
+    display: none; /* إخفاء اسم DOLERO تحت 340px ليتبقى اللوغو والسلة والقائمة بمساحة واسعة جداً */
   }
   .cart-btn {
     padding: 0.35rem 0.5rem;
@@ -819,26 +833,26 @@ a:focus-visible, button:focus-visible {
     padding: 4px;
   }
   .hamburger span {
-    width: 18px;
+    width: 17px;
   }
 
   .hero-copy {
-    padding-inline: 0.35rem;
-    gap: 0.6rem;
+    padding-inline: 0.25rem;
+    gap: 0.55rem;
   }
 
   .hero-eyebrow {
-    font-size: .7rem;
-    padding: .2rem .7rem;
+    font-size: .68rem;
+    padding: .18rem .65rem;
   }
 
   .hero-hl {
-    font-size: 1.45rem;
+    font-size: 1.38rem;
   }
 
   .hero-desc {
-    font-size: .82rem;
-    line-height: 1.5;
+    font-size: .78rem;
+    line-height: 1.45;
   }
 
   .cta-primary,
@@ -846,13 +860,14 @@ a:focus-visible, button:focus-visible {
     min-height: 38px;
     font-size: .86rem;
     padding: .5rem 1rem;
+    max-width: 250px;
   }
 
   .trust-strip {
-    gap: .35rem .6rem;
+    gap: .3rem .55rem;
   }
 
   .trust-pill {
-    font-size: .7rem;
+    font-size: .68rem;
   }
 }

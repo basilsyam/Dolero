@@ -111,28 +111,23 @@ $wa = 'https://wa.me/' . preg_replace('/\D/', '', $shop['whatsapp'])
         <span>مشغل دوليرو — حلويات فاخرة</span>
       </div>
 
-      <!-- The headline IS the hero — big, bold, real -->
+      <!-- Headline: natural wrap without forced breaks -->
       <h1 class="hero-hl">
-        حلويات صنعت<br>
-        لتُحفر في ذاكرة<br>
-        لحظاتكم
+        حلويات صنعت لتُحفر في ذاكرة لحظاتكم
       </h1>
 
-      <!-- Description: warm, direct, no AI filler phrases -->
+      <!-- Description: warm, direct, elegant -->
       <p class="hero-desc">
-        من تشيز كيك بلوبيري طازج إلى كب كيك مخصوص لمناسبتكم — كل قطعة تُصنع
-        باليد يومياً بمكونات مختارة، جاهزة فوراً أو تجهّز حسب رغبتكم.
+        تشكيلة استثنائية من التشيز كيك الفاخر والكب كيك المبتكر، مصنوعة يومياً بأجود المكونات الطازجة — جاهزة فوراً أو تجهّز لمناسباتكم الخاصة.
       </p>
 
-      <!-- CTAs -->
+      <!-- CTAs (Luxury Rounded Pills) -->
       <div class="hero-ctas">
         <a href="#menu" class="cta-primary">
           <span>شوف القائمة</span>
-          <!-- arrow down SVG -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 16-6-6h12Z"/></svg>
         </a>
         <a href="<?= $wa ?>" target="_blank" rel="noopener" class="cta-ghost">
-          <!-- WhatsApp SVG -->
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.522 3.656 1.432 5.17L2 22l4.93-1.293A9.953 9.953 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm4.7 13.71c-.2.56-.976 1.01-1.6 1.14-.428.09-.985.162-2.86-.615-2.4-1.003-3.95-3.435-4.07-3.593-.116-.157-.967-1.287-.967-2.454 0-1.167.61-1.74.826-1.98a.878.878 0 0 1 .636-.3c.118 0 .227.005.327.01.26.012.39.028.561.44.21.51.72 1.766.783 1.895.063.13.105.28.02.448-.082.166-.124.27-.248.415-.124.146-.26.325-.371.438-.123.123-.25.257-.107.504.143.248.637.993 1.369 1.608 1.05.937 1.922 1.238 2.272 1.381.267.108.583.083.782-.13.248-.265.556-.706.87-1.141.222-.313.5-.35.79-.24.292.108 1.853.874 2.172 1.034.318.16.529.237.607.367.077.13.077.75-.123 1.31Z"/>
           </svg>
@@ -140,7 +135,7 @@ $wa = 'https://wa.me/' . preg_replace('/\D/', '', $shop['whatsapp'])
         </a>
       </div>
 
-      <!-- Trust strip: horizontal scroll pills, not icon columns -->
+      <!-- Trust strip: single-line compact badges -->
       <div class="trust-strip">
         <div class="trust-pill">
           <span class="trust-dot"></span>
@@ -152,11 +147,7 @@ $wa = 'https://wa.me/' . preg_replace('/\D/', '', $shop['whatsapp'])
         </div>
         <div class="trust-pill">
           <span class="trust-dot"></span>
-          <span>مكونات طازجة يومياً</span>
-        </div>
-        <div class="trust-pill">
-          <span class="trust-dot"></span>
-          <span>تنسيق للمناسبات</span>
+          <span>طازج يومياً</span>
         </div>
       </div>
 
